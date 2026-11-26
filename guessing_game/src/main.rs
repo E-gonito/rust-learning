@@ -7,7 +7,10 @@ fn main() {
     // new(); is a function that creates a growable, UTF-8 encoded bit of text
     // :: (Scope Resolution Operator) means accessing the String namespace
     let mut guess = String::new();
+    // From io namespace, make a stdin with the stdin() function
     io::stdin()
+        // .read_line takes a user input and appends it to the argument string
+        // &mut guess
         .read_line(&mut guess)
         .expect("Failed to read the line!");
     println!("You guessed: {guess}");
